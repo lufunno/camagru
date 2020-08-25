@@ -1,0 +1,5 @@
+.htaccess
+use ajax for everything
+admin account
+if not logged out => could end up on main page
+<textarea> for comments

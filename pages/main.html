@@ -1,0 +1,68 @@
+<div id="main" class="col-lg-7 col-md-8 col-sm-11">
+	<div id='image_div'>
+	<div id="video_div">
+		<video id="video" class="photo" autoplay></video>
+	</div>
+
+	<div id="photo_div" class="col col-lg-12 col-md-12 col-sm-12">
+		<canvas id="canvas"></canvas>
+		<img id="saved_photo" alt="saved photo" src=<?php echo "img/tmp_snapshot.png?" . filectime("img/tmp_snapshot.png")?>>
+	</div>
+</div>
+	<div class='col-lg-12 col-md-12 col-sm-12 upload'>
+		<label class="col-lg-3 col-md-3 col-sm-3 photo_button upload_button" for="upload_pic">
+			Upload a picture
+			<input id="upload_pic" type="file" accept=".png .jpg .jpeg">
+		</label>
+		<button id="tocambutton" class="col-lg-3 col-md-3 col-sm-3 photo_button upload_button"><span>Back to cam</span></button>
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12">
+	<button id="clearbutton" class="photo_button"><span>Clear props</span></button>
+	<button id="backbutton" class="photo_button"><span>Don't save</span></button>
+	<button id="startbutton" class="photo_button"><span>Take picture</span></button>
+	<button id="savebutton" class="photo_button"><span>Save picture</span></button>
+	</div>
+
+	<div id="prop_div" class='col-lg-12 col-md-12 col-sm-12'>
+		<?php
+			$props = array(array('name' => 'moustache', 'type' => 'small'), array('name' => 'red_nose', 'type' => 'small'), array('name' => 'trump_hair', 'type' => 'mask'), array('name' => 'batman', 'type' => 'mask'), array('name' => 'beard', 'type' => 'beard'), array('name' => 'rainbow', 'type' => 'frame'), array('name' => 'flower_frame', 'type' => 'frame'), array('name' => 'xmas', 'type' => 'frame'), array('name' => 'xmas_hat', 'type' => 'mask'), array('name' => 'sunglasses', 'type' => 'mask'), array('name' => 'glasses', 'type' => 'mask'), array('name' => 'beer', 'type' => 'bot_left'), array('name' => 'giraffe', 'type' => 'bot_left'), array('name' => 'wolf', 'type' => 'mask'), array('name' => 'crown', 'type' => 'mask'));
+			foreach($props as $prop)
+			{
+				echo ("<img id='" . $prop['name'] . "' src='thumb.php?prop=" . $prop['name'] . "&type=" . $prop['type'] . "' class='prop'>");
+			}
+		?>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/props.js"></script>
+<script type="text/javascript" src="js/webcam.js"></script>
+
+<div id="side_bar" class="col-lg-5 col-md-4 col-sm-4">
+	<a href='account.php?act=pht'>
+		My photo gallery
+	</a>
+	<div id="min_photo_library">
+		<?php
+		if (isset($_SESSION['logged_on_user']))
+		{
+			include('library/display_photos.php');
+			include('library/fetch_db_obj.php');
+
+
+			$photos = $db->get_user_photos(1, -1);
+			foreach($photos as $photo)
+			{
+				echo ("<img class='min_img col-lg-4 col-md-4 col-sm-4' src='img/user/" . $photo['user_id'] . '/' . $photo['name']. ".png'>");
+			}
+		}
+		?>
+	</div>
+	<?php
+	if (count($photos) == 18)
+				echo ("<a id='more' class='col-lg-12 col-md-12 col-sm-12' href='account.php?act=pht'>...more</a>");
+	?>
+</div>
+
+<div class="min_side_bar col-sm-1">
+
+</div>

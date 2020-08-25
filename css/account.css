@@ -1,0 +1,39 @@
+#account_mngmt .form_title{
+	color: black;
+	padding: 5px;
+}
+
+#account_mngmt .form_div{
+	margin-top: 10px;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+#account_mngmt {
+	margin-top: 20px;
+}
+
+.account_navbar li{
+	display: inline;
+	text-align: left;
+}
+
+.account_navbar{
+	margin-top: 30px;
+}
+
+.account_navbar a {
+	border: none;
+	font: 100% "Trebuchet MS", Helvetica;
+	background: none;
+	padding: 10px;
+	text-align: left;
+	border-radius: 5px;
+}
+
+#mng_el {
+	border-right: 1px solid black;
+	text-align: right;
+	/*padding-right: 13px;*/
+}
+

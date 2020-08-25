@@ -1,0 +1,161 @@
+#gallery_title {
+	margin: 10px 0 10px 0;
+}
+
+.gallery_section {
+	background: #e6e6e6;
+	margin: 0 4% 20px 4%;
+	border-radius: 2%;
+	position: relative;
+}
+
+.gallery_section p {
+	line-height: 1.4em;
+}
+
+.gallery_section input {
+	border-radius: 20%;
+}
+
+.image_section {
+	position: relative;
+	width: 100%;
+}
+
+.gallery_img {
+	border-radius: 2%;
+	position: relative;
+}
+
+.delete_photo, .download_photo {
+	border: none;
+	position: absolute;
+	z-index: 2;
+	margin: 0;
+	padding: 5px;
+}
+
+
+.download_photo {
+	margin-left: calc(12.5% + 25px);
+}
+
+.like_comment {
+	text-align: left;
+	padding: 5px 10px 5px 5px;
+	font-size: 1em;
+}
+
+.comment_buttons, .comment_buttons p {
+	text-align: right;
+}
+
+.hide_comments {
+	display: none;
+}
+
+.gallery_section .form {
+	padding: 5px;
+	width: 100%;
+}
+
+.like {
+	display: inline-block;
+	width: 40px;
+	padding: 5px;
+	margin: 0;
+	border: solid 1px #43D1AF;
+	border-radius: 2%;
+}
+
+.nb_likes {
+	display: inline-block;
+	vertical-align: top;
+	background: #43D1AF;
+	padding: 3px;
+	margin-left: -5px;
+	border-radius: 5px;
+	font-size: 0.7em;
+}
+
+.comment_buttons button {
+	background: #e6e6e6;
+	border: none;
+	font: 100% "Trebuchet MS", Helvetica;
+	text-align: right;
+	line-height: 1.5em;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.comment {
+	position: relative;
+	color: #ffffff;
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	/*font-size: 0.8em;*/
+	word-wrap: break-word;
+}
+
+.comment_section {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.2);
+	margin: 10px;
+	border-radius: 5px;
+	display: none;
+	overflow: auto;
+}
+
+.image_section .comment_text {
+	padding: 0 15px 0 30px;
+	color: #ffffff;
+	font-size: 0.8em;
+	font-weight: lighter;
+	text-align: left;
+	word-wrap: break-word;
+}
+
+.comment_username, .comment_date {
+	color: #43D1AF;
+}
+
+.comment_title {
+	font-size: 0.9em;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 2px 10px 2px 10px;
+	border-radius: 5px;
+	word-wrap: break-word;
+}
+
+.next_prev {
+	clear: both;
+}
+
+.add_comment input {
+	border-radius: 0;
+}
+
+.add_comment input[type=submit]{
+	border: 1px solid transparent;
+}
+
+.gallery_section textarea {
+	border: none;
+	height: 4em;
+	margin-right: 5px;
+	overflow: auto;
+	font: ..9 "Trebuchet MS", Helvetica;
+	resize: none;
+	display: inline-block;
+	overflow: auto;
+}
+
+#more {
+	display: block;
+}
+
+/*.comment_buttons button ::hover{
+	/*cursor: hand;*/
+/*}*/
+

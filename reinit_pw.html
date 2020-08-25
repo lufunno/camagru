@@ -1,0 +1,14 @@
+<form class="form_div col-lg-5 col-md-5 col-sm-11" method='post' action=<?php echo "'update_pw.php?user=" . $_GET['user'] . "'";?>>
+	<p class='form_title'>
+		My password
+	</p>
+	<ul class="form">
+	<input style="display: none;" name="old_password" value=<?php echo $_GET['pw'];?>>
+		<li>
+			<label> New Password: </label>
+			<input id="password" type="password" name="new_password">
+		</li>
+		<li>
+			<input type='submit' name='submit' value='Change password'>
+		</li>
+</form>

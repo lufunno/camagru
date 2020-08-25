@@ -1,0 +1,8 @@
+<!-- <a id="logo" class="col-lg-3 col-sm-4" href="index.php"></a> -->
+<a href="index.php">
+	<h1> Camagru </h1>
+</a>
+<?php
+if (isset($_SESSION['logged_on_user']) && $_SESSION['logged_on_user'] != NULL)
+	include('partials/navbar.html');
+?>

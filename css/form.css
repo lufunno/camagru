@@ -1,0 +1,70 @@
+.form_title {
+	font-size: 1.3em;
+    color: #ffffff;
+	padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    background-color: #43D1AF;
+}
+
+.form_div {
+    background-color: #e6e6e6;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+.form label {
+    display: block;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    display:block;
+    padding: 12px 20px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #d9d9d9;
+    outline: none;
+}
+
+input[type='text'], input[type='password'], input[type='email'] {
+    text-align: left;
+}
+
+input[type="submit"] {
+    font-size: 1em;
+    font-weight: bold;
+    background: #43D1AF;
+    color: #ffffff;
+    border: none;
+}
+
+input:focus {
+    border: 1px solid blue;
+}
+
+.form {
+    list-style: none;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+textarea {
+    width: 100%;
+}
+
+.name {
+    width: 49%;
+    display: inline;
+}
+
+.required {
+    color: red;
+}
+
+#reinit_password {
+    margin: 50px 30% 0 30%;
+}
